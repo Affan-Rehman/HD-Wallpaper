@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_wall_details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ll_adView"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_wall_details"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/transparent"
+        android:theme="@style/ToolbarLightDark"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fitsSystemWindows="true"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_details_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_download_red"
+        app:fabCustomSize="50dp"
+        app:backgroundTint="@color/white"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_details_setas"
+        app:layout_constraintTop_toTopOf="@+id/btn_details_setas"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_details_setas"
+        android:contentDescription="@string/download" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_details_setas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/set_wallpaper"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/bg_gradient_round"
+        android:fontFamily="@font/montserrat_medium"
+        style="@style/Widget.MaterialComponents.Button"
+        app:layout_constraintStart_toEndOf="@+id/btn_details_download"
+        app:layout_constraintEnd_toStartOf="@+id/button_details_fav"
+        app:layout_constraintBottom_toTopOf="@+id/ll_adView"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_details_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="50dp"
+        app:backgroundTint="@color/white"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_details_setas"
+        app:layout_constraintTop_toTopOf="@+id/btn_details_setas"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_details_setas"
+        android:contentDescription="@string/download" />
+
+    <com.like.LikeButton
+        android:id="@+id/btn_details_fav"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:anim_scale_factor="2"
+        app:circle_end_color="@color/colorPrimary"
+        app:circle_start_color="@color/red"
+        app:dots_primary_color="@color/colorPrimary"
+        app:dots_secondary_color="@color/red"
+        app:icon_size="25dp"
+        app:is_enabled="true"
+        app:like_drawable="@mipmap/ic_fav_hover"
+        app:unlike_drawable="@mipmap/ic_fav_red"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/button_details_fav"
+        app:layout_constraintStart_toStartOf="@+id/button_details_fav"
+        app:layout_constraintTop_toTopOf="@+id/button_details_fav"
+        app:layout_constraintBottom_toBottomOf="@+id/button_details_fav"/>
+
+    <LinearLayout
+        android:id="@+id/ll_adView"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_rate"
+        android:title="@string/rate"
+        app:showAsAction="never"
+        android:icon="@mipmap/rate"/>
+
+    <item
+        android:id="@+id/menu_share"
+        android:title="@string/share"
+        app:showAsAction="never"
+        android:icon="@mipmap/share_nav"/>
+
+    <item
+        android:id="@+id/menu_report"
+        android:title="@string/report"
+        app:showAsAction="never"
+        android:icon="@mipmap/report"/>
+
+    <item
+        android:id="@+id/menu_details"
+        android:title="@string/details"
+        app:showAsAction="never"
+        android:icon="@mipmap/share_nav"/>
+
+</menu>

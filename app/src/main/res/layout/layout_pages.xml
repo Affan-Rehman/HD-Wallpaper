@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_pages"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingStart="17dp"
+        android:paddingEnd="17dp"
+        android:textColor="@color/text_black"
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat_medium"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/view_pages"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_about"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pages"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

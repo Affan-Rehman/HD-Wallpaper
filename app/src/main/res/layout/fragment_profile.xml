@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_top_curve">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_stroke_cricle_gradient"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user"
+                app:riv_border_color="@color/bg_pro_pic"
+                app:riv_border_width="5dp"
+                app:riv_corner_radius="60dp"
+                app:layout_constraintTop_toTopOf="@+id/view1"
+                app:layout_constraintStart_toStartOf="@+id/view1"
+                app:layout_constraintEnd_toEndOf="@+id/view1"
+                app:layout_constraintBottom_toBottomOf="@+id/view1" />
+
+            <TextView
+                android:id="@+id/tv_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/text_title"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/view1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_profile_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/text_desc"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profile_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="65dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_gradient_start_curve"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/iv_profile_edit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/edit"
+                android:padding="13dp"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"/>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black_30_dark"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profile_email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favourite"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                app:layout_constraintTop_toTopOf="@+id/sp_prof_fav"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/sp_prof_fav" />
+
+            <Spinner
+                android:id="@+id/sp_prof_fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/rv_wall_by_cat"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_wall_by_cat"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/sp_prof_fav"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <TextView
+                android:id="@+id/tv_empty_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="@string/no_data_found"
+                android:textColor="@color/text_title"
+                android:fontFamily="@font/montserrat_medium"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="gone"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:src="@mipmap/arrow_up"
+                android:visibility="invisible"
+                app:fabSize="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:background="@drawable/bg_gradient"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <TextView
+        android:id="@+id/tv_empty_wallcat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/not_log"
+        android:textColor="@color/text_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
+
+    <fr.castorflex.android.circularprogressbar.CircularProgressBar
+        android:id="@+id/pb_wallcat"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        app:cpb_color="#FFee44"
+        app:cpb_colors="@array/pocket_bar_colors"
+        app:cpb_max_sweep_angle="300"
+        app:cpb_min_sweep_angle="10"
+        app:cpb_rotation_speed="1.0"
+        app:cpb_stroke_width="4dp"
+        app:cpb_sweep_speed="1.0"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

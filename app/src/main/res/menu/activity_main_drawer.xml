@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/home"
+            android:title="@string/home"
+            android:checked="true"/>
+
+        <item
+            android:id="@+id/nav_recent"
+            android:icon="@mipmap/ic_nav_recent"
+            android:title="@string/recently_viewed" />
+
+        <item
+            android:id="@+id/nav_featured"
+            android:icon="@mipmap/ic_nav_featured"
+            android:title="@string/featured" />
+
+        <item
+            android:id="@+id/nav_rated"
+            android:icon="@mipmap/ic_nav_rated"
+            android:title="@string/most_rated" />
+
+        <item
+            android:id="@+id/nav_downloaded"
+            android:icon="@mipmap/ic_nav_download"
+            android:title="@string/most_downloaded" />
+
+    </group>
+
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@mipmap/setting"
+        android:title="@string/action_settings" />
+
+    <item
+        android:id="@+id/nav_login"
+        android:icon="@mipmap/login"
+        android:title="@string/login" />
+
+</menu>

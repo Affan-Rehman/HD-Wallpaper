@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_colors"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_color"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        app:riv_corner_radius="5dp"
+        android:scaleType="centerCrop"
+        app:riv_border_width="3dp"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_color_tick"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tick"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

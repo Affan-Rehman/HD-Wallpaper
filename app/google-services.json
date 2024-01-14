@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "196385892096",
+    "project_id": "hd-wallpaper-91bcc",
+    "storage_bucket": "hd-wallpaper-91bcc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196385892096:android:dcc95a28c2d13b91a2b5e5",
+        "android_client_info": {
+          "package_name": "com.amazia_iwallcraft.wallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196385892096-cnuiamf69q6kd828fbekgud87plvi799.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDrpH1tyUFpJSuaOjVeKFpts35rEBjVSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196385892096-cnuiamf69q6kd828fbekgud87plvi799.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

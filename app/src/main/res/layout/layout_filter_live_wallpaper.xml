@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_add_playlist"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="30dp"
+    android:background="@color/bg" >
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="25sp"
+        android:textColor="@color/text_black"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:text="@string/live_wallpapers"
+        android:textColor="@color/text_desc"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/montserrat_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1"/>
+
+    <TextView
+        android:id="@+id/tv_filter_popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="14sp"
+        android:text="@string/popular"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/bg_button_filter"
+        android:fontFamily="@font/montserrat_semi_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_filter_most_download"/>
+
+    <TextView
+        android:id="@+id/tv_filter_most_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="14sp"
+        android:text="@string/most_downloaded"
+        android:textColor="@color/white"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/bg_button_filter"
+        android:fontFamily="@font/montserrat_semi_bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_filter_popular"
+        app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+    <TextView
+        android:id="@+id/tv_filter_rated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="14sp"
+        android:text="@string/most_rated"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_button_filter"
+        android:fontFamily="@font/montserrat_semi_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_filter_popular"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_filter_clear"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:text="@string/clear"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/bg_button_cancel"
+        app:backgroundTint="@null"
+        android:fontFamily="@font/montserrat_semi_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_filter"
+        app:layout_constraintTop_toBottomOf="@+id/tv_filter_rated" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_filter"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:text="@string/filter"
+        android:textColor="@color/white"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_gradient_curve"
+        app:backgroundTint="@null"
+        android:fontFamily="@font/montserrat_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_filter_clear"
+        app:layout_constraintTop_toTopOf="@+id/button_filter_clear"
+        app:layout_constraintBottom_toBottomOf="@+id/button_filter_clear" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

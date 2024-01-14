@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_bottom_latest"
+        android:icon="@drawable/ic_bottom_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/nav_bottom_cat"
+        android:icon="@drawable/ic_bottom_category"
+        android:title="@string/categories" />
+
+    <item
+        android:id="@+id/nav_bottom_live_wallpapers"
+        android:icon="@drawable/ic_bottom_live_wallpaper"
+        android:title="@string/live_wallpapers" />
+
+    <item
+        android:id="@+id/nav_bottom_popular"
+        android:icon="@drawable/ic_bottom_popular"
+        android:title="@string/popular" />
+
+    <item
+        android:id="@+id/nav_bottom_profile"
+        android:icon="@drawable/ic_bottom_profile"
+        android:title="@string/profile" />
+
+</menu>

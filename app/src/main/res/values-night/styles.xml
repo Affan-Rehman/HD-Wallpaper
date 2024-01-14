@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="ToolbarLightDark" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="iconTint">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="popupMenuBackground">@color/bg_lite</item>
+    </style>
+
+</resources>

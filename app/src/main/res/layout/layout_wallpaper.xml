@@ -1,0 +1,71 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:gravity="center">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:riv_corner_radius="10dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_wall"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:clickable="false"
+        android:background="@drawable/bg_gradient_black"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_wall_cat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/montserrat_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_wall_fav"
+        app:layout_constraintTop_toTopOf="@+id/button_wall_fav"
+        app:layout_constraintBottom_toBottomOf="@+id/button_wall_fav"/>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_gradient_curve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.like.LikeButton
+        android:id="@+id/button_wall_fav"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentEnd="true"
+        app:anim_scale_factor="2"
+        app:circle_end_color="@color/white"
+        app:circle_start_color="@color/red"
+        app:dots_primary_color="@color/white"
+        app:dots_secondary_color="@color/red"
+        app:icon_size="18dp"
+        app:is_enabled="true"
+        app:like_drawable="@mipmap/fav_hover"
+        app:unlike_drawable="@mipmap/fav"
+        app:layout_constraintTop_toTopOf="@+id/view1"
+        app:layout_constraintBottom_toBottomOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintEnd_toEndOf="@+id/view1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
