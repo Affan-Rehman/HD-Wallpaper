@@ -300,7 +300,22 @@ public class FragmentWallLatest extends Fragment {
             adapter = new AdapterWallpaper(getActivity(), arrayList, new RecyclerViewClickListener() {
                 @Override
                 public void onClick(int position) {
-                    methods.showInter(position, "");
+
+                    Constant.arrayList.clear();
+                    Constant.arrayList.addAll(arrayList);
+                    Constant.arrayList.removeAll(Collections.singleton(null));
+
+                    int real_pos = Constant.arrayList.indexOf(arrayList.get(position));
+
+                    Intent intent = new Intent(getActivity(), WallPaperDetailsActivity.class);
+                    intent.putExtra("pos", real_pos);
+                    intent.putExtra("list_type", getString(R.string.latest));
+                    intent.putExtra("page", page);
+                    intent.putExtra("wallType", wallType);
+                    intent.putExtra("color_ids", color_ids);
+
+                    startActivity(intent);
+
                 }
             });
             AnimationAdapter adapterAnim = new AlphaInAnimationAdapter(adapter);
